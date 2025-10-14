@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+.calculatorContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 500px;
+}
+
+#numberInput {
+    padding: 20px;
+    width: 500px;
+    margin-bottom: 10px;
+}
+
+.operatorContainer {
+    display: flex;
+    max-width: 500px;
+    margin-bottom: 10px;
+}
+
+.numbersContainer {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+}
+
+.number {
+    padding: 35px;
+}
+
+.operator {
+    padding: 35px;
+}
