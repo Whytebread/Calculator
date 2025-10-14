@@ -8,18 +8,19 @@
     align-items: center;
     flex-wrap: wrap;
     max-width: 500px;
+    margin: auto;
 }
 
 #numberInput {
-    padding: 20px;
+    padding: 40px;
     width: 500px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .operatorContainer {
     display: flex;
     max-width: 500px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .numbersContainer {
@@ -29,9 +30,13 @@
 }
 
 .number {
-    padding: 35px;
+    width: 100px;
+    height: 100px;
+    font-size: 18px;
 }
 
 .operator {
-    padding: 35px;
+    width: 100px;
+    height: 100px;
+    font-size: 18px;
 }
