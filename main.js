@@ -17,6 +17,10 @@ function divideNumbers() {
 
 }
 
-function Operate() {
+function clearDisplay() {
     
+}
+
+function Operate() {
+
 }
