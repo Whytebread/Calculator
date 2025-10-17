@@ -40,9 +40,9 @@ function divideNumbers() {
 }
 
 function clearDisplay() {
-    
+    calculatorDisplay.innerHTML = ""
 }
 
 function Operate() {
-
+    
 }
