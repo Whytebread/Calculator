@@ -24,19 +24,34 @@ const zeroButton = document.querySelector("#zero");
 
 // calculator functions
 function addNumbers(){
-
+    let numOne 
+    let numTwo
+    let selectedOperator = +
+    const result = `${numOne} ${selectedOperator} ${numTwo}`;
+    return result;
 }
 
 function subtractNumbers() {
-
+    let numOne 
+    let numTwo
+    let selectedOperator = -
+    const result = `${numOne} ${selectedOperator} ${numTwo}`;
+    return result;
 }
 
 function multiplyNumbers() {
-
+    let numOne 
+    let numTwo
+    let selectedOperator = *
+    const result = `${numOne} ${selectedOperator} ${numTwo}`;
+    return result;
 }
 
 function divideNumbers() {
-
+    let numTwo
+    let selectedOperator = /
+    const result = `${numOne} ${selectedOperator} ${numTwo}`;
+    return result;
 }
 
 function clearDisplay() {
