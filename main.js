@@ -23,32 +23,20 @@ const zeroButton = document.querySelector("#zero");
 
 
 // calculator functions
-function addNumbers(){
-    let numOne
-    let numTwo
-    const result = numOne + numTwo
-    return result;
+function addNumbers(numOne, numTwo){
+    return numOne + numTwo;
 }
 
-function subtractNumbers() {
-    let numOne 
-    let numTwo
-    const result = numOne - numTwo;
-    return result;
+function subtractNumbers(numOne, numTwo) {
+    return numOne - numTwo;
 }
 
-function multiplyNumbers() {
-    let numOne 
-    let numTwo
-    const result = numOne * numTwo;
-    return result;
+function multiplyNumbers(numOne, numTwo) {
+    return numOne * numTwo;
 }
 
-function divideNumbers() {
-    let numONe
-    let numTwo
-    const result = numONe / numTwo;
-    return result;
+function divideNumbers(numOne, numTwo) {
+    return numOne / numTwo;
 }
 
 function clearDisplay() {
