@@ -13,12 +13,18 @@ numberButtons.forEach(button => {
 });
 
 // event listener for operator buttons
-operatorButtonsButtons.forEach(button => {
+operatorButtons.forEach(button => {
     button.addEventListener("click", handleOperatorClick)
 });
 
 // functions to handle number and operator button clicks
+function handleNumberClick(event) {
+    let digit = event.target.value
+}
 
+function handleOperatorClick(event) {
+    let op = event.target.value
+}
 
 // calculator functions
 function addNumbers(numOne, numTwo){
