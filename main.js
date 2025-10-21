@@ -13,7 +13,9 @@ const clearButton = document.querySelector("#clearButton");
 const numberButtons = document.querySelectorAll(".number");
 
 // event listener for number buttons
-
+numberButtons.forEach(button => {
+    button.addEventListener("click", handleNumberClick)
+});
 
 
 // calculator functions
