@@ -40,7 +40,7 @@ function divideNumbers(numOne, numTwo) {
 }
 
 function clearDisplay() {
-    calculatorDisplay.innerHTML = ""
+    calculatorDisplay.value = ""
 }
 
 function Operate() {
