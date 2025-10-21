@@ -1,5 +1,7 @@
 // global variables
 const calculatorDisplay = document.querySelector("#numberInput");
+const equalButton = document.querySelector("#equalButton");
+const clearButton = document.querySelector("#clearButton");
 
 // operator buttons
 const operatorButtons = document.querySelectorAll(".operator");
