@@ -2,12 +2,7 @@
 const calculatorDisplay = document.querySelector("#numberInput");
 
 // operator buttons
-const addButton = document.querySelector("#addButton");
-const subtractButton = document.querySelector("#subtractButton");
-const multiplyButton = document.querySelector("#multiplyButton");
-const divideButton = document.querySelector("#divideButton");
-const equalsButton = document.querySelector("#equalsButton");
-const clearButton = document.querySelector("#clearButton");
+const operatorButtons = document.querySelectorAll(".operator");
 
 // number buttons
 const numberButtons = document.querySelectorAll(".number");
@@ -16,6 +11,13 @@ const numberButtons = document.querySelectorAll(".number");
 numberButtons.forEach(button => {
     button.addEventListener("click", handleNumberClick)
 });
+
+// event listener for operator buttons
+operatorButtonsButtons.forEach(button => {
+    button.addEventListener("click", handleOperatorClick)
+});
+
+// functions to handle number and operator button clicks
 
 
 // calculator functions
