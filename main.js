@@ -9,23 +9,36 @@ const operatorButtons = document.querySelectorAll(".operator");
 // number buttons
 const numberButtons = document.querySelectorAll(".number");
 
-// event listener for number buttons
+// event listeners for buttons
 numberButtons.forEach(button => {
     button.addEventListener("click", handleNumberClick)
 });
 
-// event listener for operator buttons
 operatorButtons.forEach(button => {
     button.addEventListener("click", handleOperatorClick)
 });
 
-// functions to handle number and operator button clicks
+equalButton.addEventListener("click", handleEqualClick);
+
+clearButton.addEventListener("click", handleEqualClick);
+
+// functions to handle button clicks
 function handleNumberClick(event) {
     let digit = event.target.value
+    calculatorDisplay.append(digit);
 }
 
 function handleOperatorClick(event) {
     let op = event.target.value
+    calculatorDisplay.append(op);
+}
+
+function handleEqualClick(event) {
+
+}
+
+function handleClearClick() {
+
 }
 
 // calculator functions
@@ -49,10 +62,7 @@ function clearDisplay() {
     calculatorDisplay.value = ""
 }
 
-function Operate() {
-    let numOne =
-    let numTwo =
-    let selectedOperator =
+function Operate(numOne, selectedOperator, numTwo) {
     const result = `${numOne} ${selectedOperator} ${numTwo}`
     return result;
 }
