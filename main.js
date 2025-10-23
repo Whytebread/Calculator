@@ -25,12 +25,12 @@ clearButton.addEventListener("click", handleEqualClick);
 // functions to handle button clicks
 function handleNumberClick(event) {
     let digit = event.target.value
-    calculatorDisplay.append(digit);
+    calculatorDisplay.append += digit;
 }
 
 function handleOperatorClick(event) {
     let op = event.target.value
-    calculatorDisplay.append(op);
+    calculatorDisplay.append += op;
 }
 
 function handleEqualClick(event) {
@@ -63,6 +63,12 @@ function clearDisplay() {
 }
 
 function Operate(numOne, selectedOperator, numTwo) {
-    const result = `${numOne} ${selectedOperator} ${numTwo}`
-    return result;
+    if (selectedOperator === "+") {
+        return addNumbers(numOne, numTwo);
+    } else if (selectedOperator === "-") {
+        return subtractNumbers(numOne, numTwo);
+    } else if (selectedOperator === "*") {
+        return multiplyNumbers(numOne, numTwo);
+    } else (selectedOperator === "/")
+        return divideNumbers(numOne, numTwo);
 }
