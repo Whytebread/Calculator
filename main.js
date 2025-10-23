@@ -25,15 +25,15 @@ clearButton.addEventListener("click", handleEqualClick);
 // functions to handle button clicks
 function handleNumberClick(event) {
     let digit = event.target.value
-    calculatorDisplay.append += digit;
+    calculatorDisplay.value += digit;
 }
 
 function handleOperatorClick(event) {
     let op = event.target.value
-    calculatorDisplay.append += op;
+    calculatorDisplay.value += op;
 }
 
-function handleEqualClick(event) {
+function handleEqualClick() {
 
 }
 
