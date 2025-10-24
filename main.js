@@ -3,6 +3,11 @@ const calculatorDisplay = document.querySelector("#numberInput");
 const equalButton = document.querySelector("#equalButton");
 const clearButton = document.querySelector("#clearButton");
 
+// inital variables to store numbers and operator
+let numOne = "";
+let numTwo = "";
+let selectedOperator = "";
+
 // operator buttons
 const operatorButtons = document.querySelectorAll(".operator");
 
@@ -20,7 +25,7 @@ operatorButtons.forEach(button => {
 
 equalButton.addEventListener("click", handleEqualClick);
 
-clearButton.addEventListener("click", handleEqualClick);
+clearButton.addEventListener("click", handleClearClick);
 
 // functions to handle button clicks
 function handleNumberClick(event) {
@@ -34,11 +39,11 @@ function handleOperatorClick(event) {
 }
 
 function handleEqualClick() {
-
+    Operate(numOne, selectedOperator, numTwo);
 }
 
 function handleClearClick() {
-
+    clearDisplay();
 }
 
 // calculator functions
@@ -64,7 +69,9 @@ function clearDisplay() {
 
 function Operate(numOne, selectedOperator, numTwo) {
     if (selectedOperator === "+") {
-        return addNumbers(numOne, numTwo);
+        let result = addNumbers(numOne, numTwo);
+        calculatorDisplay.value = "";
+        calculatorDisplay.value += result;
     } else if (selectedOperator === "-") {
         return subtractNumbers(numOne, numTwo);
     } else if (selectedOperator === "*") {
