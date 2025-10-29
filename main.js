@@ -7,6 +7,8 @@ const clearButton = document.querySelector("#clearButton");
 let numOne = "";
 let numTwo = "";
 let selectedOperator = "";
+let isSecondNumber = false;
+calculatorDisplay.value = "";
 
 // operator buttons
 const operatorButtons = document.querySelectorAll(".operator");
