@@ -36,9 +36,12 @@ function handleNumberClick(event) {
 }
 
 function handleOperatorClick(event) {
-    if (numOne !== "" && selectedOperator === "") 
+    if (numOne ==="") {
+        numOne = calculatorDisplay.value;
+    }
+
     op = event.target.value
-    numOne = calculatorDisplay.value;
+    isSecondNumber = true;
     calculatorDisplay.value = ""
     selectedOperator = op;
 }
