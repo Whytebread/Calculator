@@ -81,11 +81,17 @@ function Operate(numOne, selectedOperator, numTwo) {
     if (selectedOperator === "+") {
         let result = addNumbers(numOne, numTwo);
         calculatorDisplay.value = "";
-        calculatorDisplay.value += result;
+        calculatorDisplay.value = result;
     } else if (selectedOperator === "-") {
-        return subtractNumbers(numOne, numTwo);
+        let result = subtractNumbers(numOne, numTwo);
+        calculatorDisplay.value = "";
+        calculatorDisplay.value = result;
     } else if (selectedOperator === "*") {
-        return multiplyNumbers(numOne, numTwo);
+        let result = multiplyNumbers(numOne, numTwo);
+        calculatorDisplay.value = "";
+        calculatorDisplay.value = result;
     } else (selectedOperator === "/")
-    return divideNumbers(numOne, numTwo);
+    let result = divideNumbers(numOne, numTwo);
+    calculatorDisplay.value= "";
+    calculatorDisplay.value= result;
 }
