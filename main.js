@@ -65,19 +65,19 @@ function handleClearClick() {
 
 // calculator functions
 function addNumbers(numOne, numTwo) {
-    return parseInt(numOne + numTwo);
+    return parseInt(numOne) + parseInt(numTwo);
 }
 
 function subtractNumbers(numOne, numTwo) {
-    return parseInt(numOne - numTwo);
+    return parseInt(numOne) - parseInt(numTwo);
 }
 
 function multiplyNumbers(numOne, numTwo) {
-    return parseInt(numOne * numTwo);
+    return parseInt(numOne) * parseInt(numTwo);
 }
 
 function divideNumbers(numOne, numTwo) {
-    return parseInt(numOne / numTwo);
+    return parseInt(numOne) / parseInt(numTwo);
 }
 
 function clearDisplay() {
