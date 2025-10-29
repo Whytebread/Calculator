@@ -31,21 +31,22 @@ clearButton.addEventListener("click", handleClearClick);
 
 // functions to handle button clicks
 function handleNumberClick(event) {
-    let digit = event.target.value
+    digit = event.target.value
     calculatorDisplay.value += digit;
 }
 
 function handleOperatorClick(event) {
-    let op = event.target.value
-    let numOne = calculatorDisplay.value;
+    if (numOne !== "" && selectedOperator === "") 
+    op = event.target.value
+    numOne = calculatorDisplay.value;
     calculatorDisplay.value = ""
-    let selectedOperator = op;
-    calculatorDisplay.value += op;
+    selectedOperator = op;
 }
 
 function handleEqualClick() {
+    numTwo = calculatorDisplay.value;
     Operate(numOne, selectedOperator, numTwo);
-    let numTwo = calculatorDisplay.value;
+    
 }
 
 function handleClearClick() {
@@ -54,27 +55,27 @@ function handleClearClick() {
 
 // calculator functions
 function addNumbers(numOne, numTwo) {
-    return numOne + numTwo;
+    return parseInt(numOne + numTwo);
 }
 
 function subtractNumbers(numOne, numTwo) {
-    return numOne - numTwo;
+    return parseInt(numOne - numTwo);
 }
 
 function multiplyNumbers(numOne, numTwo) {
-    return numOne * numTwo;
+    return parseInt(numOne * numTwo);
 }
 
 function divideNumbers(numOne, numTwo) {
-    return numOne / numTwo;
+    return parseInt(numOne / numTwo);
 }
 
 function clearDisplay() {
     calculatorDisplay.value = ""
-    let numOne = "";
-    let numTwo = "";
-    let selectedOperator = "";
-    let isSecondNumber = false;
+    numOne = "";
+    numTwo = "";
+    selectedOperator = "";
+    isSecondNumber = false;
 }
 
 function Operate(numOne, selectedOperator, numTwo) {
@@ -90,8 +91,9 @@ function Operate(numOne, selectedOperator, numTwo) {
         let result = multiplyNumbers(numOne, numTwo);
         calculatorDisplay.value = "";
         calculatorDisplay.value = result;
-    } else (selectedOperator === "/")
+    } else if (selectedOperator === "/") {
     let result = divideNumbers(numOne, numTwo);
     calculatorDisplay.value= "";
     calculatorDisplay.value= result;
+    }
 }
