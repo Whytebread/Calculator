@@ -47,9 +47,16 @@ function handleOperatorClick(event) {
 }
 
 function handleEqualClick() {
-    numTwo = calculatorDisplay.value;
+     if (numOne !== "" && selectedOperator !== "" && calculatorDisplay.value !== "") {
+        numTwo = calculatorDisplay.value;
+     }
+
     Operate(numOne, selectedOperator, numTwo);
-    
+             calculatorDisplay.value = result;
+        numOne = result;       
+        numTwo = "";
+        selectedOperator = "";
+        isSecondNumber = false;
 }
 
 function handleClearClick() {
