@@ -37,11 +37,15 @@ function handleNumberClick(event) {
 
 function handleOperatorClick(event) {
     let op = event.target.value
+    let numOne = calculatorDisplay.value;
+    calculatorDisplay.value = ""
+    let selectedOperator = op;
     calculatorDisplay.value += op;
 }
 
 function handleEqualClick() {
     Operate(numOne, selectedOperator, numTwo);
+    let numTwo = calculatorDisplay.value;
 }
 
 function handleClearClick() {
@@ -49,7 +53,7 @@ function handleClearClick() {
 }
 
 // calculator functions
-function addNumbers(numOne, numTwo){
+function addNumbers(numOne, numTwo) {
     return numOne + numTwo;
 }
 
@@ -67,6 +71,10 @@ function divideNumbers(numOne, numTwo) {
 
 function clearDisplay() {
     calculatorDisplay.value = ""
+    let numOne = "";
+    let numTwo = "";
+    let selectedOperator = "";
+    let isSecondNumber = false;
 }
 
 function Operate(numOne, selectedOperator, numTwo) {
@@ -79,5 +87,5 @@ function Operate(numOne, selectedOperator, numTwo) {
     } else if (selectedOperator === "*") {
         return multiplyNumbers(numOne, numTwo);
     } else (selectedOperator === "/")
-        return divideNumbers(numOne, numTwo);
+    return divideNumbers(numOne, numTwo);
 }
