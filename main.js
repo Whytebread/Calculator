@@ -32,6 +32,13 @@ clearButton.addEventListener("click", handleClearClick);
 // functions to handle button clicks
 function handleNumberClick(event) {
     digit = event.target.value
+        if (justCalculated) {
+        calculatorDisplay.value = "";
+        numOne = "";
+        numTwo = "";
+        selectedOperator = "";
+        justCalculated = false;
+    }
     calculatorDisplay.value += digit;
 }
 
@@ -57,6 +64,7 @@ function handleEqualClick() {
         numTwo = "";
         selectedOperator = "";
         isSecondNumber = false;
+        justCalculated = true;
 }
 
 function handleClearClick() {
