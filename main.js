@@ -77,6 +77,9 @@ function multiplyNumbers(numOne, numTwo) {
 }
 
 function divideNumbers(numOne, numTwo) {
+    if (numOne === 0 || numTwo === 0) {
+        console.error("Cannot divide by zero");
+    }
     return parseInt(numOne) / parseInt(numTwo);
 }
 
