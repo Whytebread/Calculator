@@ -59,7 +59,7 @@ function handleEqualClick() {
         numTwo = calculatorDisplay.value;
     }
 
-    const result = Operate(numOne, selectedOperator, numTwo);
+    let result = Operate(numOne, selectedOperator, numTwo);
     result = parseFloat(result.toFixed(4)); 
     calculatorDisplay.value = result;
     numOne = result;
