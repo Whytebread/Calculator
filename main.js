@@ -60,6 +60,7 @@ function handleEqualClick() {
     }
 
     const result = Operate(numOne, selectedOperator, numTwo);
+    result = parseFloat(result.toFixed(4)); 
     calculatorDisplay.value = result;
     numOne = result;
     numTwo = "";
@@ -78,7 +79,7 @@ function addNumbers(numOne, numTwo) {
     const b = parseFloat(numTwo);
 
     if (isNaN(a) || isNaN(b)) return "Error";
-    
+
     return a + b;
 }
 
